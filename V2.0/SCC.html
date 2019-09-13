@@ -1,0 +1,56 @@
+<!-- Last Modified: 2019/07/25 -->
+<!-- Copyright,2019,Yiwen Xiao -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Social Cost of CO2 example 07/25/2019</title>
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+<link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+<h1><font color="white">Measure your social impact</font></h1>
+
+<form onsubmit="return false" oninput="
+	// amount1.value = Math.round(hours.valueAsNumber * 0.000707*1000)/1000 ; /*CO2*/
+	// amount2.value = Math.round(hours.valueAsNumber * 0.000707 * 41 * 1000)/1000;/*social cost of CO2 $41*/
+	"> 
+
+	<div class="image-background">
+
+	<!-- Input -->
+
+	<legend>Enter your data</legend>
+
+	<p><div id="p7">Kilowatt-hours of electricity:
+		<div id="p6"><div id="display1">0</div></div></div></p>
+
+	<p><div id="p7">Total number of days:
+		<div id="p6"><div id="display2">0</div></div></div></p>
+
+	<legend>Equivalency Results</legend>
+
+	<!--  Output-->
+	<script type='text/javascript' src='CO2.js'></script>
+
+	<p><title>Carbon Dioxide Equivalent:</title>
+	<div id="p5"><div class="display" id="display4">0</div><div id="word">   Kilograms</div></div></p>
+
+	<p><title>Your Social Cost of Carbon:</title>
+	<div id="p0"><div class="display" id="display3">0</div><div id="word">   dollars</div></div></p>
+	
+</div>
+
+</form>
+
+<footer>
+  <p>Sources from: <a href="https://www.edf.org/sites/default/files/social_cost_of_greenhouse_gases_factsheet.pdf">Social Costs of Greenhouse Gases</a>.</p>
+</footer>
+
+</body>
+</html>

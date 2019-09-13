@@ -1,0 +1,71 @@
+<!-- Last Modified: 2019/07/16 -->
+<!-- Copyright,2019,Yiwen Xiao -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Calculator example 07/16/2019</title>
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<!--     <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+	<script src="https://d3js.org/d3-fetch.v1.min.js"></script> -->
+<link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+<h1><font color="white">Measure your GHG impact</font></h1>
+
+<form onsubmit="return false" oninput="
+	// amount1.value = Math.round(hours.valueAsNumber * 0.000707*1000)/1000; /*CO2*/
+	// amount2.value = Math.round(hours.valueAsNumber * 0.000707/0.06*10)/10; /*trees*/
+	// amount3.value = Math.round(hours.valueAsNumber * 0.000707/0.008887*10)/10; gasoline
+	// amount4.value = Math.round(hours.valueAsNumber * 0.000707/0.00000784) /*phone*/
+	// amount5.value = Math.round(hours.valueAsNumber * 0.000707/0.000409) /*vehicle Miles*/
+	"> 
+
+	<div class="image-background">
+
+	<!-- Input -->
+
+	<legend>Enter your data</legend>
+
+	<p><div id="p7">Kilowatt-hours of electricity:
+		<div id="p6"><div id="display0">0</div></div></div></p>
+
+	<p><div id="p7">Total number of days:
+		<div id="p6"><div id="display6">0</div></div></div></p>
+
+	<legend>Equivalency Results</legend>
+
+	<!--  Output-->
+
+	<script type='text/javascript' src='new.js'></script>
+
+	<p><title>Carbon Dioxide Equivalent:</title>
+
+	<div id="p5"><div class="display" id="display5">0</div><div id="word">   Kilograms</div></div></p>
+
+	<p><title>Carbon sequestered by</title>
+
+	<div id="p1"><div class="display" id="display1">0</div><div id="word">   tree seedlings grown for 10 years</div></div></p>
+
+	<p><title>Greenhouse gas emissions from</title>
+	<div id="p4"><div class="display" id="display4">0</div><div id="word">   Miles driven by an average passenger vehicle</div></div></p>
+
+	<p><title>CO2 emissions from</title>
+	<div id="p2"><div class="display" id="display2">0</div><div id="word">   gallons of gasoline consumed</div></div></p>
+
+	<div id="p3"><div class="display" id="display3">0</div><div id="word">   number of smartphones charged</div></div>
+
+</div>
+
+</form>
+
+<footer>
+  <p>Sources from EPA website: <a href="https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator?unit=kilowatthours&amount=2500">Greenhouse Gas Equivalencies Calculator</a>.</p>
+</footer>
+
+</body>
+</html>
