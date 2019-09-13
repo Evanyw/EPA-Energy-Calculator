@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Calculator example 06/27/2019</title>
+<style>
+body {
+	padding:2em;
+	font-family:Georgia;
+	font-size:1em;
+	background-image: url("http://www.uidownload.com/files/292/816/865/green-energy.jpg");
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	background-position: auto;
+}
+
+/*Enter your data*/
+.image-background {
+	background: #FFFFFF;
+  	opacity: 0.2;
+  	height: 700px;
+  	width: 1000px;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	position: relative;
+}
+
+.image-background:hover {
+	background: #FFFFFF;
+  	opacity: 0.9;
+  	height: 700px;
+  	width: 1000px;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	position: relative;
+}
+
+/*one layer outside*/
+form {
+	/*background:#EEEEEE;*/
+	opacity: 1;
+	padding:1em;
+	width:1200px;
+	height:720px;
+}
+
+label {
+	display:inline-block;
+	width:250px; /*kwh width>*/
+	text-align:right;
+	<!font-weight:bold;>
+}
+
+input {
+	display:inline-block;
+	width:70px;
+	margin:0 1em;
+	padding:2px 3px;
+	border-radius:3px;
+	border:1px solid #ccc;
+	font-size:1em;
+}
+
+/*
+output {
+	display:inline-block;
+	width:70px;
+	margin:0 1em;
+	padding:2px 3px;
+	border-radius:3px;
+	border:1px solid #ccc;
+	font-size:1em; /*output box>
+}
+*/
+
+output {
+	background: #FFFFFF;
+	display: inline-block;
+	width:70px;
+	margin:0 1em;
+	padding:2px 3px;
+	border-radius:3px;
+	font-size:1.2em;
+}
+
+legend {
+	font-weight:bold;
+	font-size:1.5em;
+	margin-left:0em;
+}
+
+p:last-of-type {
+	margin-left:0px;
+	<!text-transform:uppercase;>
+}
+
+/*strong {
+	display: inline-block;
+	background: #fff7db;
+	height: 200px;
+}*/
+
+title {
+	width:250px; /*kwh width>*/
+	height:200px;
+	text-align:right;
+	display: inline-block;
+	float:left;
+}
+#p1 {
+	display: inline-block;
+	width: 350px;
+	height:200px;  /* box size: 70*200*/
+	background:#FFFFFF;
+	background-image: url("https://image.flaticon.com/icons/svg/173/173228.svg");
+	background-repeat: no-repeat;
+	background-size: 200px 150px;
+	background-position: right bottom;
+	border:1px solid #ccc;
+	border-radius:5px;
+	margin-left: 1em;
+
+}
+
+#p2 {
+	width: 350px;
+	height:200px;  /* box size: 70*200*/
+	background:#FFFFFF;
+	background-image: url("https://clipartstation.com/wp-content/uploads/2017/11/feuer-clipart-7.jpg");
+	
+	background-repeat: no-repeat;
+	background-size: 200px 150px;
+	background-position: right bottom;
+	border:1px solid #ccc;
+	border-radius:5px;
+	display: table;
+	float: left;
+	margin-left: 1em;
+}
+
+#p3 {
+	weight:350px;
+	height:200px;  /* box size: 70*200*/
+	background:#FFFFFF;
+	background-image: url("https://ak6.picdn.net/shutterstock/videos/1027617746/thumb/10.jpg");
+	background-repeat: no-repeat;
+	background-size: 250px 180px;
+	background-position: right bottom;
+	border:1px solid #ccc;
+	border-radius:5px;
+	display: inline-block;
+	margin-left: 1em;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Measure your impact</h1>
+
+<form onsubmit="return false" oninput="
+	amount1.value = Math.round(hours.valueAsNumber * 0.000707*1000)/1000;
+	amount2.value = Math.round(hours.valueAsNumber * 0.000707/0.85*1000)/1000;
+	amount3.value = (hours.valueAsNumber * 0.000707/0.000915).toFixed(0);
+	amount4.value = (hours.valueAsNumber * 0.000707/0.00000784).toFixed(0)">
+
+	<div class="image-background">
+
+	<legend>Enter your data</legend>
+
+	<p><label for="hours">Kilowatt-hours of eletricity:</label>
+	<input type="number" min="0" onkeypress="if(this.value.length==6) return false;" id="hours" name="hours"></p>
+
+	<legend>Equivalency Results</legend>
+
+	<p><label>Carbon Dioxide Equivalent:</label>
+	<output name="amount1" for="hours">0</output>   Metric Tons</p>
+
+	<p><title>Carbon sequestered by</title>
+	<div id="p1"><output name="amount2" for="hours">0</output>   acres of U.S. forests in one year</div></p>
+
+	<p><title>CO2 emissions from</title>
+	<div id="p2"><output name="amount3" for="hours">0</output>   pounds of coal burned</div></p>
+
+	<div id="p3"><output name="amount4" for="hours">0</output>   number of smartphones charged</div>
+
+</div>
+
+</form>
+
+</body>
+</html>

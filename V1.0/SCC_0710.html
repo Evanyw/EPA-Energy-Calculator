@@ -1,0 +1,47 @@
+<!-- Last Modified: 2019/07/10 -->
+<!-- Copyright,2019,Yiwen Xiao -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Social Cost of CO2 example 07/10/2019</title>
+
+<link rel="stylesheet" href="style2.css" />
+
+</head>
+
+<body>
+
+<h1><font color="white">Measure your social impact</font></h1>
+
+<form onsubmit="return false" oninput="
+	amount1.value = Math.round(hours.valueAsNumber * 0.000707*1000)/1000 ; /*CO2*/
+	amount2.value = Math.round(hours.valueAsNumber * 0.000707 * 41 * 1000)/1000;/*social cost of CO2 $41*/
+	"> 
+
+	<div class="image-background">
+
+	<!-- Input -->
+
+	<legend>Enter your data</legend>
+
+	<p><label for="hours">Kilowatt-hours of electricity:</label>
+	<input type="number" min="0" step="any" onkeypress="if(this.value.length==6) return false;" id="hours" name="hours" /></p>
+
+	<legend>Equivalency Results</legend>
+
+	<!--  Output-->
+
+	<p><label>Carbon Dioxide Equivalent:</label>
+	<output name="amount1" for="hours">0</output>   Metric Tons</p>
+
+	<p><title>Your Social Cost of Carbon:</title>
+	<div id="p0"><div class="display"><output name="amount2" for="hours">0</output></div><div id="word">   dollars</div></div></p>
+	
+</div>
+
+</form>
+
+</body>
+</html>

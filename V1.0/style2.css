@@ -1,0 +1,179 @@
+body {
+	padding:2em;
+	font-family:Arial;
+	font-size:1em;
+	background: #2A52EC;
+
+}
+
+/*Enter your data*/
+.image-background {
+	background: #FFFFFF;
+  	opacity: 1;
+/*  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	position: relative;*/
+  	border-radius: 10px;
+  	padding:2em;
+  	margin: 0em;
+
+}
+
+/*one layer outside*/
+form {
+	/*background:#EEEEEE;*/
+	opacity: 1;
+	padding:1em;
+	width:1200px;
+}
+
+label {
+	display:inline-block;
+	width:250px; /*kwh width>*/
+	text-align:right;
+	<!font-weight:bold;>
+}
+
+input {
+	display:inline-block;
+	width:70px;
+	margin:0 1em;
+	padding:2px 3px;
+	border-radius:3px;
+	border:1px solid #ccc;
+	font-size:1em;
+}
+
+output {
+	background: #FFFFFF;   /*output blank which shows number*/
+	display: inline-block;
+	width:70px;
+	margin:2px 10px 0px 15px;
+	padding:2px 3px;
+	border-radius:3px;
+	font-size:1.2em;
+}
+
+#word {
+	background: #FFFFFF;   /*output words after number*/
+	display: inline-block;
+	width:220px;
+	/*margin:5 1em;*/
+	margin:5px 1px 0px 10px;
+	padding:5px 0px;
+	border-radius:3px;
+	font-size:1em;
+}
+
+.display {
+	background: #FFFFFF;   /*output blank which shows number*/
+	display: inline-block;
+	width:90px;
+	margin:2px 10px 0px 0px;
+	padding:2px 3px;
+	border-radius:3px;
+	font-size:1em;
+	font-weight: bold;
+	color: #6AA84F;
+}
+
+legend {
+	font-weight:bold;
+	font-size:1.5em;
+	margin-left:0em;
+}
+
+p:last-of-type {
+	margin-left:3px;
+	/*text-transform:uppercase*/
+}
+
+/*strong {
+	display: inline-block;
+	background: #fff7db;
+	height: 200px;
+}*/
+
+title {
+	width:250px; /*kwh width>*/
+	height:200px;
+	text-align:right;
+	display: inline-block;
+	float:left;
+}
+
+#p0 {
+	display: inline-block;
+	width: 350px;
+	height:200px;  /* box size: 70*200*/
+	background:#FFFFFF;
+	background-image: url("https://image.flaticon.com/icons/svg/189/189093.svg");
+	background-repeat: no-repeat;
+	background-size: 180px 130px;
+	background-position: right bottom;
+	border:1px solid #ccc;
+	border-radius:5px;
+	margin-left: 1em;
+
+}
+
+#p1 {
+	display: inline-block;
+	width: 350px;
+	height:200px;  /* box size: 70*200*/
+	background:#FFFFFF;
+	background-image: url("https://image.flaticon.com/icons/svg/628/628297.svg");
+	background-repeat: no-repeat;
+	background-size: 200px 150px;
+	background-position: right bottom;
+	border:1px solid #ccc;
+	border-radius:5px;
+	margin-left: 1em;
+
+}
+
+#p2 {
+	width: 350px;
+	height:200px;  /* box size: 70*200*/
+	background:#FFFFFF;
+	background-image: url("https://image.flaticon.com/icons/svg/1890/1890122.svg");
+	
+	background-repeat: no-repeat;
+	background-size: 180px 130px;
+	background-position: right bottom;
+	border:1px solid #ccc;
+	border-radius:5px;
+	display: table;
+	float: left;
+	margin-left: 1em;
+}
+
+#p3 {
+	weight:350px;
+	height:200px;  /* box size: 70*200*/
+	background:#FFFFFF;
+	background-image: url("https://image.flaticon.com/icons/svg/360/360379.svg");
+	background-repeat: no-repeat;
+	background-size: 180px 130px;
+	background-position: right bottom;
+	border:1px solid #ccc;
+	border-radius:5px;
+	display: inline-block;
+	margin-left: 1em;
+}
+
+#p4 {
+	display: inline-block;
+	width: 350px;
+	height:200px;  /* box size: 70*200*/
+	background:#FFFFFF;
+	background-image: url("https://image.flaticon.com/icons/svg/296/296216.svg");
+	background-repeat: no-repeat;
+	background-size: 220px 170px;
+	background-position: right bottom;
+	border:1px solid #ccc;
+	border-radius:5px;
+	margin-left: 1em;
+
+}

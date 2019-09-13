@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Calculator example 06/27/2019</title>
+<style>
+body {
+	padding:2em;
+	font-family:Georgia;
+	font-size:1em;
+}
+
+.image-background {
+	background: #EEEEEE;
+  	opacity: 0.6;
+  	height: 350px;
+  	width: 700px;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	position: relative;
+}
+
+.image-background:hover {
+	background: #FFFFFF;
+  	opacity: 0.8;
+  	height: 350px;
+  	width: 700px;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	position: relative;
+}
+
+form {
+	/*background:#EEEEEE;*/
+	opacity: 1;
+	padding:1em;
+	width:1000px; /*yellow box*/
+	height:700px;
+	background-image: url("http://www.uidownload.com/files/292/816/865/green-energy.jpg");
+}
+
+label {
+	display:inline-block;
+	width:250px; /*kwh width>*/
+	text-align:right;
+	<!font-weight:bold;>
+}
+
+input {
+	display:inline-block;
+	width:70px;
+	margin:0 1em;
+	padding:2px 3px;
+	border-radius:3px;
+	border:1px solid #ccc;
+	font-size:1em;
+}
+
+output {
+	display:inline-block;
+	width:70px;
+	margin:0 1em;
+	padding:2px 3px;
+	border-radius:3px;
+	border:1px solid #ccc;
+	font-size:1em; /*output box>*/
+}
+
+legend {
+	font-weight:bold;
+	font-size:1.5em;
+	margin-left:0em;
+}
+
+p:last-of-type {
+	margin-left:0px;
+	<!text-transform:uppercase;>
+}
+
+<!
+strong {
+	display:inline-block;
+	width:250px; 
+	text-align:right;
+}>
+
+</style>
+</head>
+
+<body>
+
+<h1>Measure your impact</h1>
+
+
+<form onsubmit="return false" oninput="
+	amount1.value = Math.round(hours.valueAsNumber * 0.000707*1000)/1000;
+	amount2.value = Math.round(hours.valueAsNumber * 0.000707/0.85*1000)/1000;
+	amount3.value = (hours.valueAsNumber * 0.000707/0.000915).toFixed(0);
+	amount4.value = (hours.valueAsNumber * 0.000707/0.00000784).toFixed(0)">
+
+	<div class="image-background">
+
+	<legend>Enter your data</legend>
+
+	<p><label for="hours">Kilowatt-hours of eletricity:</label>
+	<input type="number" min="0" id="hours" name="hours"></p>
+
+	<legend>Equivalency Results</legend>
+
+	<p><label>Carbon Dioxide Equivalent:</label>
+	<output name="amount1" for="hours">0</output>   Metric Tons</p>
+
+	<p><label>Carbon sequestered by</label>
+	<output name="amount2" for="hours">0</output>   acres of U.S. forests in one year</p>
+
+	<p><label>CO2 emissions from</label>
+	<output name="amount3" for="hours">0</output>   pounds of coal burned</p>
+
+	<p><label> </label>
+	<output name="amount4" for="hours">0</output>   number of smartphones charged</p>
+
+</div>
+
+</form>
+
+</body>
+</html>
